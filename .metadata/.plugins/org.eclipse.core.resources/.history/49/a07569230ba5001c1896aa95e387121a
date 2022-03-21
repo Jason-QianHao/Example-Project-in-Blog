@@ -1,0 +1,23 @@
+package com.jason.api;
+
+import org.springframework.amqp.core.AmqpTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import com.jason.config.QueueEnum;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Component
+@Slf4j
+public class Productor {
+
+    @Autowired
+    private AmqpTemplate amqpTemplate;
+
+    public void sendMessage(String msg){
+        //给延迟队列发送消息
+        amqpTemplate.convertAndSend(QueueEnum.QUEUE.getExchange(), QueueEnum.QUEUE.getRouteKey(), msg);
+        log.info("send msg:{}",msg);
+    }
+}

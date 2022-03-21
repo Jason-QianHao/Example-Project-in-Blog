@@ -1,0 +1,16 @@
+package com.jason.lambda;
+
+public class LambdaDemo {
+
+	public void demo1() {
+		/*
+		 * new Thread(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("The runable now is using!");
+            }
+		   }).start();
+		 */
+		new Thread(()->System.out.println("The runable now is using! It's a lambda"));
+	}
+}

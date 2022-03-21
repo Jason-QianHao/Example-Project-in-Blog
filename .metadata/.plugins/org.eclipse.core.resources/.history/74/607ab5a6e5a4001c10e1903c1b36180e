@@ -1,0 +1,10 @@
+server:
+   port: 8081
+   context-path: /
+   
+spring:
+   activemq:
+      broker-url: tcp://127.0.0.1:616161
+      user: admin
+      password: admin
+queue: myQueue

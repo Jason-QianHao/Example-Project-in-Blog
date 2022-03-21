@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1647402107812_0" label="Java Main Sources" name="Java Main Sources"/>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1647402107849_1" label="Java Test Sources" name="Java Test Sources"/>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1647402140031_3" label="MQ" name="MQ">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ActiveMQProductor" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ActiveMQConsumer" type="4"/>
+<item elementID="=RabbitMQProductor" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/RabbitMQConsumer" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1647483498890_5" label="Framework" name="Framework">
+<item elementID="=SwaggerDemo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=WebSocketDemo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1647574916550_7" label="Elasticsearch" name="Elasticsearch">
+<item elementID="=ElasticsearchDemo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1647837851403_9" label="Java" name="Java">
+<item elementID="=Java5" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Java8" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1647402112065_2" label="Window Working Set" name="Aggregate for window 1647402112065"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1647483558099_6" label="Multiple Working Sets" name="Aggregate:framework:MQ:">
+<workingSet IMemento.internal.id="Framework"/>
+<workingSet IMemento.internal.id="MQ"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1647486644052_9" label="Multiple Working Sets" name="Aggregate:Framework:MQ:">
+<workingSet IMemento.internal.id="Framework"/>
+<workingSet IMemento.internal.id="MQ"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1647574961596_8" label="Multiple Working Sets" name="Aggregate:Elasticsearch:Framework:MQ:">
+<workingSet IMemento.internal.id="Elasticsearch"/>
+<workingSet IMemento.internal.id="Framework"/>
+<workingSet IMemento.internal.id="MQ"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1647837872236_10" label="Multiple Working Sets" name="Aggregate:Elasticsearch:Framework:Java:MQ:">
+<workingSet IMemento.internal.id="Elasticsearch"/>
+<workingSet IMemento.internal.id="Framework"/>
+<workingSet IMemento.internal.id="Java"/>
+<workingSet IMemento.internal.id="MQ"/>
+</workingSet>
+<mruList name="Java"/>
+<mruList name="Elasticsearch"/>
+<mruList name="Framework"/>
+<mruList name="MQ"/>
+</workingSetManager>

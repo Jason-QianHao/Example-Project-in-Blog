@@ -1,0 +1,18 @@
+package com.jason.interfacedemo;
+
+public class Impl implements Interface1, Interface2{
+
+	
+	@Override
+	public void f() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void def() {
+		// TODO Auto-generated method stub
+		Interface1.super.def();
+	}
+
+}

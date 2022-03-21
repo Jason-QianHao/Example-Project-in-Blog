@@ -1,0 +1,17 @@
+package com.jason.api;
+
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
+import org.springframework.stereotype.Component;
+
+@Component
+@RabbitListener(queues = "queue")
+public class Comsumer {
+
+    @Autowired
+    private OmsPortalOrderService portalOrderService;
+    @RabbitHandler
+    public void handle(Long orderId){
+        portalOrderService.cancelOrder(orderId);
+        LOGGER.info("process orderId:{}",orderId);
+    }
+}

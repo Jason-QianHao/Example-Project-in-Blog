@@ -1,0 +1,20 @@
+package com.jason.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.jason.dao.ElasticDao;
+
+@Service
+public class ElasticsearchService {
+	
+	@Autowired
+	private ElasticDao elasticDao;
+	
+	/*
+	 * 创建索引
+	 */
+	public void createIndex(String indexName) {
+		
+	}
+}

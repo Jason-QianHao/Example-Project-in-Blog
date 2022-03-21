@@ -1,0 +1,10 @@
+package com.jason;
+
+public class VariableArray {
+
+	public static void demo(int... array) {
+		for(int i : array) {
+			System.out.println(i);
+		}
+	}
+}
