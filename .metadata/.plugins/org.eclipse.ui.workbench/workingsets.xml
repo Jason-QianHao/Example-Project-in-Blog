@@ -19,6 +19,10 @@
 <item elementID="=Java5" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=Java8" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1647918739723_11" label="Database" name="Database">
+<item elementID="=MongoDBDemo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=ReidsDemo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1647402112065_2" label="Window Working Set" name="Aggregate for window 1647402112065"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1647483558099_6" label="Multiple Working Sets" name="Aggregate:framework:MQ:">
 <workingSet IMemento.internal.id="Framework"/>
@@ -39,6 +43,14 @@
 <workingSet IMemento.internal.id="Java"/>
 <workingSet IMemento.internal.id="MQ"/>
 </workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1647918764704_12" label="Multiple Working Sets" name="Aggregate:Database:Elasticsearch:Framework:Java:MQ:">
+<workingSet IMemento.internal.id="Database"/>
+<workingSet IMemento.internal.id="Elasticsearch"/>
+<workingSet IMemento.internal.id="Framework"/>
+<workingSet IMemento.internal.id="Java"/>
+<workingSet IMemento.internal.id="MQ"/>
+</workingSet>
+<mruList name="Database"/>
 <mruList name="Java"/>
 <mruList name="Elasticsearch"/>
 <mruList name="Framework"/>

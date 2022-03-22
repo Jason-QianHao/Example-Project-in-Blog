@@ -1,13 +1,13 @@
 eclipse.preferences.version=1
 org.springframework.ide.eclipse.boot.wizard.PopularityTracker.data-elasticsearch=1
-org.springframework.ide.eclipse.boot.wizard.PopularityTracker.web=1
-org.springframework.ide.eclipse.boot.wizard.PreferredSelections.artifactId=ElasticsearchDemo
+org.springframework.ide.eclipse.boot.wizard.PopularityTracker.web=2
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.artifactId=MongoDBDemo
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.bootVersion=2.6.4
-org.springframework.ide.eclipse.boot.wizard.PreferredSelections.description=ElasticsearchDemo
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.description=MongoDBDemo
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.groupId=com.jason
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.javaVersion=1.8
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.language=java
-org.springframework.ide.eclipse.boot.wizard.PreferredSelections.name=ElasticsearchDemo
+org.springframework.ide.eclipse.boot.wizard.PreferredSelections.name=MongoDBDemo
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packageName=com.jason
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.packaging=jar
 org.springframework.ide.eclipse.boot.wizard.PreferredSelections.type=MAVEN
