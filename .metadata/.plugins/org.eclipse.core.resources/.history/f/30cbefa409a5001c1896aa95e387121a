@@ -1,5 +1,0 @@
-package com.jason.config;
-
-public enum QueueEnum {
-
-}
