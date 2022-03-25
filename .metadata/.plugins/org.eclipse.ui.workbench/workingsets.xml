@@ -31,6 +31,10 @@
 <item elementID="=SpringSecurityDmeo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=SpringDataJPADemo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1648193656801_17" label="Microservices" name="Microservices">
+<item elementID="=SpringCloudAlibabaProvider" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/SpringCloudAlibabaConsumer" type="4"/>
+</workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1647402112065_2" label="Window Working Set" name="Aggregate for window 1647402112065"/>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1647483558099_6" label="Multiple Working Sets" name="Aggregate:framework:MQ:">
 <workingSet IMemento.internal.id="Framework"/>
@@ -75,9 +79,19 @@
 <workingSet IMemento.internal.id="ORM"/>
 <workingSet IMemento.internal.id="Spring"/>
 </workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1648193765122_21" label="Multiple Working Sets" name="Aggregate:Database:Elasticsearch:Framework:Java:Microservices:MQ:ORM:Spring:">
+<workingSet IMemento.internal.id="Database"/>
+<workingSet IMemento.internal.id="Elasticsearch"/>
+<workingSet IMemento.internal.id="Framework"/>
+<workingSet IMemento.internal.id="Java"/>
+<workingSet IMemento.internal.id="Microservices"/>
+<workingSet IMemento.internal.id="MQ"/>
+<workingSet IMemento.internal.id="ORM"/>
+<workingSet IMemento.internal.id="Spring"/>
+</workingSet>
+<mruList name="Microservices"/>
 <mruList name="Spring"/>
 <mruList name="ORM"/>
 <mruList name="Database"/>
 <mruList name="Java"/>
-<mruList name="Elasticsearch"/>
 </workingSetManager>

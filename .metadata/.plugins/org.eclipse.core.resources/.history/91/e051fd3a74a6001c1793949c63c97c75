@@ -1,5 +1,0 @@
-package com.jason.service;
-
-public class ElasticsearchService {
-
-}

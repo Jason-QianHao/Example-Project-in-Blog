@@ -1,9 +1,0 @@
-server:
-   port: 80
-   context-path: /
-   
-spring: 
- data: 
-  elasticsearch: 
-   cluster-name: es-cluster
-   cluster-nodes: 10.133.28.55:9300
