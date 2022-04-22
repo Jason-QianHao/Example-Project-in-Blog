@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="workingset_selection_history">
+		<item value="Framework"/>
 		<item value="Spring"/>
 		<item value="Microservices"/>
 		<item value="ORM"/>
 		<item value="Database"/>
-		<item value="Elasticsearch"/>
 	</list>
 	<section name="NewWizardAction">
 		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.ui.wizards.new.file"/>

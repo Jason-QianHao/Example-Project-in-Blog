@@ -11,6 +11,7 @@
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1647483498890_5" label="Framework" name="Framework">
 <item elementID="=SwaggerDemo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=WebSocketDemo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=SpringDocDemo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1647574916550_7" label="Elasticsearch" name="Elasticsearch">
 <item elementID="=ElasticsearchDemo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
