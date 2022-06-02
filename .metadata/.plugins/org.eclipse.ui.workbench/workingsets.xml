@@ -23,9 +23,12 @@
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1647918739723_11" label="Database" name="Database">
 <item elementID="=MongoDBDemo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ReidsDemo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=RedissonDemo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1648009889064_13" label="ORM" name="ORM">
 <item elementID="=MybatisDemo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=FastMybaitsDemo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Mybaits-Plus-Demo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1648094981492_15" label="Spring" name="Spring">
 <item elementID="=CommonBusiness" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
@@ -87,7 +90,7 @@
 <workingSet IMemento.internal.id="ORM"/>
 <workingSet IMemento.internal.id="Spring"/>
 </workingSet>
-<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1648458707950_20" label="Multiple Working Sets" name="Aggregate:Database:Elasticsearch:Framework:Java:Microservices:MQ:ORM:Spring:">
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1654057399895_19" label="Multiple Working Sets" name="Aggregate:Database:Elasticsearch:Framework:Java:Microservices:MQ:ORM:Spring:">
 <workingSet IMemento.internal.id="Database"/>
 <workingSet IMemento.internal.id="Elasticsearch"/>
 <workingSet IMemento.internal.id="Framework"/>
