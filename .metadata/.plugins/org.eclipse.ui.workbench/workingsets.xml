@@ -36,6 +36,7 @@
 <item elementID="=SpringDataJPADemo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=SpringSecurityOAuth2Demo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=IJPay-Demo-SpringBoot" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=SpringCacheForCaffine" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1648193656801_17" label="Microservices" name="Microservices">
 <item elementID="=DubboConsumer" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
