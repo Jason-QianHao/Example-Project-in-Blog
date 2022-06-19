@@ -8,6 +8,8 @@ class CommonBusinessApplicationTests {
 
 	@Test
 	void contextLoads() {
+		String path = this.getClass().getResource("/").getPath();
+		System.out.println(path);
 	}
 
 }
