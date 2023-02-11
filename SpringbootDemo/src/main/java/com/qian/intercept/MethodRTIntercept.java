@@ -16,12 +16,13 @@ public class MethodRTIntercept implements MethodInterceptor {
     public Object invoke(MethodInvocation invocation) throws Throwable {
         long startTs = System.currentTimeMillis();
         try {
-            invocation.proceed();
+            Object proceed = invocation.proceed();
             long endTs = System.currentTimeMillis();
             System.out.println("方法" + invocation.getMethod().getName() + "耗时：" + (endTs - startTs));
+            return proceed;
         } catch (Exception e) {
             e.printStackTrace();
+            return "error: " + e.getMessage();
         }
-        return null;
     }
 }
