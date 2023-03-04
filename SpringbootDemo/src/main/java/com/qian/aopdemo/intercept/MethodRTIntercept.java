@@ -1,4 +1,4 @@
-package com.qian.intercept;
+package com.qian.aopdemo.intercept;
 
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;

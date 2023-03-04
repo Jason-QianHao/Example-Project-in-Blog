@@ -1,4 +1,4 @@
-package com.qian.intercept;
+package com.qian.aopdemo.intercept;
 
 import org.springframework.aop.aspectj.AspectJExpressionPointcut;
 import org.springframework.aop.support.DefaultPointcutAdvisor;
@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class InterceptorConfig {
-    public static final String traceExecution = "execution(* com.qian.controller..*.*(..))";
+    public static final String traceExecution = "execution(* com.qian.aopdemo.controller..*.*(..))";
 
     @Bean
     public DefaultPointcutAdvisor defaultPointcutAdvisor() {
