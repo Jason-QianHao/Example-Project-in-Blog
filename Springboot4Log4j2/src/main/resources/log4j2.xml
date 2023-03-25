@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Configuration后面的status，这个用于设置log4j2自身内部的信息输出，可以不设置，当设置成trace时，你会看到log4j2内部各种详细输出-->
+<!--monitorInterval：Log4j能够自动检测修改配置 文件和重新配置本身，设置间隔秒数-->
+<configuration monitorInterval="5">
+    <!--日志级别以及优先级排序: OFF > FATAL > ERROR > WARN > INFO > DEBUG > TRACE > ALL -->
+
+    <!--变量配置-->
+    <Properties>
+        <!-- 格式化输出：%date表示日期，%thread表示线程名，%-5level：级别从左显示5个字符宽度 %msg：日志消息，%n是换行符-->
+        <!-- %logger{36} 表示 Logger 名字最长36个字符 -->
+        <property name="LOG_PATTERN"
+                  value="%d [%TX{tl} %X{rpcId} - %X{loginUserEmail}/%X{loginUserID}/%X{remoteAddr}/%X{clientId} - %X{requestURIWithQueryString}] %-5p %c{2} - %tm%n%throwable"/>
+        <!-- 定义日志存储的路径 -->
+        <property name="FILE_PATH" value="Springboot4Log4j2/logs"/>
+        <property name="PROJECT_NAME" value="SpringBoot4Log4j2"/>
+        <property name="log_level" value="info"/>
+    </Properties>
+
+    <appenders>
+
+        <console name="SYSTEM-OUT-APPENDER" target="SYSTEM_OUT">
+            <!--输出日志的格式-->
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <!--控制台只输出level及其以上级别的信息（onMatch），其他的直接拒绝（onMismatch）-->
+            <!--            <ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="DENY"/>-->
+        </console>
+        <Console name="SYSTEM-ERR-APPENDER" target="SYSTEM_ERR">
+            <!--输出日志的格式-->
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+        </Console>
+
+        <!--文件会打印出所有信息，这个log每次运行程序会自动清空，由append属性决定，适合临时测试用-->
+        <File name="Filelog" fileName="${FILE_PATH}/test.log" append="false">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+        </File>
+        <RollingFile name="ERROR-APPENDER" fileName="${FILE_PATH}/common-error.log"
+                     filePattern="${FILE_PATH}/common-error.log.%d{yyyy-MM-dd}" append="true">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <Policies/>
+            <ThresholdFilter level="ERROR"/>
+        </RollingFile>
+        <RollingFile name="APP-DEFAULT-APPENDER" fileName="${FILE_PATH}/app-default.log"
+                     filePattern="${FILE_PATH}/app-default.log.%d{yyyy-MM-dd}" append="true">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <Policies/>
+        </RollingFile>
+
+        <RollingFile name="DIGEST-APPENDER" fileName="${FILE_PATH}/springboot-digest.log"
+                     filePattern="${FILE_PATH}/springboot-digest.log.%d{yyyy-MM-dd}" append="true">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <Policies/>
+            <DefaultRolloverStrategy max="3"/>
+        </RollingFile>
+
+        <!-- 每次大小超过size，则这size大小的日志会自动存入按年份-月份建立的文件夹下面并进行压缩，作为存档-->
+        <RollingFile name="SPRINGBOOT4LOG4J2-CONTROLLER-APPENDER" fileName="${FILE_PATH}/springboot-controller.log"
+                     filePattern="${FILE_PATH}/springboot-controller.log.%d{yyyy-MM-dd_HH}" append="true">
+            <!--控制台只输出level及以上级别的信息（onMatch），其他的直接拒绝（onMismatch）-->
+            <ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="DENY"/>
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <!--                        <Policies>-->
+            <!--                            &lt;!&ndash;interval属性用来指定多久滚动一次，默认是1 hour&ndash;&gt;-->
+            <!--                            <TimeBasedTriggeringPolicy interval="1"/>-->
+            <!--                            <SizeBasedTriggeringPolicy size="10MB"/>-->
+            <!--                        </Policies>-->
+            <!-- DefaultRolloverStrategy属性如不设置，则默认为最多同一文件夹下7个文件开始覆盖-->
+            <Policies/>
+            <DefaultRolloverStrategy max="3"/>
+        </RollingFile>
+
+        <!-- 每次大小超过size，则这size大小的日志会自动存入按年份-月份建立的文件夹下面并进行压缩，作为存档-->
+        <RollingFile name="SPRINGBOOT4LOG4J2-SERVICE-APPENDER" fileName="${FILE_PATH}/springboot-service.log"
+                     filePattern="${FILE_PATH}/springboot-service.log.%d{yyyy-MM-dd_HH}" append="true">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <Policies/>
+            <DefaultRolloverStrategy max="3"/>
+        </RollingFile>
+
+        <!-- 每次大小超过size，则这size大小的日志会自动存入按年份-月份建立的文件夹下面并进行压缩，作为存档-->
+        <RollingFile name="SPRINGBOOT4LOG4J2-REPOSITORY-APPENDER" fileName="${FILE_PATH}/springboot-repository.log"
+                     filePattern="${FILE_PATH}/springboot-repository.log.%d{yyyy-MM-dd_HH}" append="true">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <Policies/>
+            <DefaultRolloverStrategy max="3"/>
+        </RollingFile>
+
+    </appenders>
+
+    <!--Logger节点用来单独指定日志的形式，比如要为指定包下的class指定不同的日志级别等。-->
+    <!--然后定义loggers，只有定义了logger并引入的appender，appender才会生效-->
+    <loggers>
+        <root level="${log_level}">
+            <appender-ref ref="ERROR-APPENDER"/>
+            <appender-ref ref="APP-DEFAULT-APPENDER"/>
+        </root>
+        <!--name:用来指定该Logger所适用的类或者类所在的包全路径, 或自定义的logger名称-->
+        <!--若是additivity设为false，则 子Logger 只会在自己的appender里输出，而不会在 父Logger 的appender里输出。-->
+        <logger name="SYSTEM-OUT" level="${log_level}" additivity="false">
+            <AppenderRef ref="SYSTEM-OUT-APPENDER"/>
+        </logger>
+        <logger name="SYSTEM-ERR" level="${log_level}" additivity="false">
+            <AppenderRef ref="SYSTEM-ERR-APPENDER"/>
+        </logger>
+
+        <logger name="com.jason.controller" level="${log_level}" additivity="false">
+            <AppenderRef ref="SPRINGBOOT4LOG4J2-CONTROLLER-APPENDER"/>
+            <appender-ref ref="ERROR-APPENDER"/>
+        </logger>
+
+        <Logger name="com.jason.service" level="${log_level}" additivity="false">
+            <AppenderRef ref="SPRINGBOOT4LOG4J2-SERVICE-APPENDER"/>
+            <appender-ref ref="ERROR-APPENDER"/>
+        </Logger>
+
+        <Logger name="com.jason.repository" level="${log_level}" additivity="false">
+            <AppenderRef ref="SPRINGBOOT4LOG4J2-REPOSITORY-APPENDER"/>
+            <appender-ref ref="ERROR-APPENDER"/>
+        </Logger>
+
+        <Logger name="DIGEST" level="${log_level}" additivity="false">
+            <AppenderRef ref="DIGEST-APPENDER"/>
+            <appender-ref ref="ERROR-APPENDER"/>
+        </Logger>
+    </loggers>
+
+</configuration>

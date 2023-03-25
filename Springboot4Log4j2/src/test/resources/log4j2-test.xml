@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <appenders>
+        <console name="Console">
+            <PatternLayout
+                    pattern="%d [%X{traceId} %X{rpcId} - %X{loginUserEmail}/%X{loginUserID}/%X{remoteAddr}/%X{clientId} - %X{requestURIWithQueryString}] %-5p %c{2} - %m%n%throwable"
+                    charset="UTF-8"/>
+        </console>
+
+    </appenders>
+
+
+    <loggers>
+        <root level="debug">
+            <appender-ref ref="Console"/>
+        </root>
+    </loggers>
+
+</configuration>
