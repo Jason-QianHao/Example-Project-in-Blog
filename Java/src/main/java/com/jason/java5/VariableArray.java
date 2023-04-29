@@ -1,4 +1,4 @@
-package com.jason;
+package com.jason.java5;
 
 public class VariableArray {
 

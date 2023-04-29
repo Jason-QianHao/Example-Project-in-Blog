@@ -1,4 +1,4 @@
-package com.jason.interfacedemo;
+package com.jason.java8.interfacedemo;
 
 public interface Interface1 {
 	
