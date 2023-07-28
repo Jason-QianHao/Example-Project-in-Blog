@@ -1,0 +1,88 @@
+server:
+  port: 8082
+
+spring:
+  # Spring boot 应用配置
+  application:
+    name: order-service
+  # Spring Cloud nacos 注册中心配置
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        namespace: 21bdae91-3386-4cb8-9b24-e7778eda2956
+        group: SEATA_GROUP
+        username: nacos
+        password: nacos
+  # ShardingSphere 配置
+  shardingsphere:
+    datasource:
+      # 数据源（逻辑名字）
+      names: m1
+      # 配置数据源
+      m1:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/test?useSSL=false&autoReconnect=true&characterEncoding=UTF-8&serverTimezone=UTC
+        username: root
+        password: qianhao123
+    # 分片的配置
+    rules:
+      sharding:
+        # 表的分片策略
+        tables:
+          # 逻辑表的名称
+          tb_order:
+            # 数据节点配置，采用Groovy表达式
+            actual-data-nodes: m1.tb_order
+            key-generate-strategy: # 主键生成策略
+              column: id  # 主键列
+              key-generator-name: snowflake  # 策略算法名称(推荐使用雪花算法)
+        key-generators:
+          snowflake:
+            type: SNOWFLAKE
+    props:
+      # 日志显示具体的SQL
+      sql-show: true
+  # Seata配置
+  seata:
+    enabled: true
+    application-id: {spring.application.name}
+    tx-service-group: service-order-group
+    # 配置中心
+    config:
+      type: nacos
+      nacos:
+        server-addr: 127.0.0.1:8848
+        namespace: 21bdae91-3386-4cb8-9b24-e7778eda2956
+        group: SEATA_GROUP
+        username: nacos
+        password: nacos
+        data-id: seata.properties
+    registry:
+      type: nacos
+      nacos:
+        application: seata-server
+        server-addr: 127.0.0.1:8848
+        group: SEATA_GROUP
+        namespace: 21bdae91-3386-4cb8-9b24-e7778eda2956
+        cluster: default
+        username: nacos
+        password: nacos
+        context-path:
+    # seata默认使用cglib代理，整合sharding-jdbc会爆错，提示ShardingSphereDataSource无法序列化，有知道怎么解决的朋友，诚心希望告知下
+    use-jdk-proxy: true
+
+  # Spring boot 日志配置
+  logging:
+      level:
+        io:
+          seata: info
+
+# mybatis-plus配置
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.jason.model.User
+  configuration:
+    #在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射 address_book ---> addressBook
+    map-underscore-to-camel-case: true
