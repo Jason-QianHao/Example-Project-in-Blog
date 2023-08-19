@@ -1,3 +1,5 @@
+package com.jason.junit;
+
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
