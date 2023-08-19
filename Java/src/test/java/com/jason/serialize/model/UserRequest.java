@@ -12,6 +12,7 @@ public class UserRequest implements Serializable {
     private static final long serialVersionUID = -5567769020560997123L;
 
     private String name;
+    private String address;
     private int age;
 
     public UserRequest(String name) {
